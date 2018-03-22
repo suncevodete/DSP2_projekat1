@@ -4,7 +4,7 @@
 // * Godina: 2017
 // *
 // * Zadatak: Ekvalizacija audio signala
-// * Autor:
+// * Autor: Jelena Boroja RA22/2015
 // *                                                                          
 // *                                                                          
 /////////////////////////////////////////////////////////////////////////////

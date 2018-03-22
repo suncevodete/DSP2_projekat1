@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := D:/ti/ccsv6/tools/compiler/c5500_4.4.1
+CG_TOOL_ROOT := C:/ti/ccsv6/tools/compiler/c5500_4.4.1
 
 ORDERED_OBJS += \
 "./aic3204.obj" \
@@ -148,13 +148,13 @@ all: EQ.out
 EQ.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C5500 Linker'
-	"D:/ti/ccsv6/tools/compiler/c5500_4.4.1/bin/cl55" -v5515 --memory_model=large -g --define=c5535 --diag_warning=225 --ptrdiff_size=16 -z -m"EQ.map" --stack_size=0x200 --heap_size=0x400 -i"D:/ti/ccsv6/tools/compiler/c5500_4.4.1/lib" -i"D:/ti/ccsv6/tools/compiler/c5500_4.4.1/include" -i"D:/nastava/OAIS DSP 2/2017-2018/PZ1/Projektni zadatak/EQ/c55xx_csl/lib" -i"D:/nastava/OAIS DSP 2/2017-2018/PZ1/Projektni zadatak/EQ/lib" --reread_libs --warn_sections --xml_link_info="vezba-ezdsp_linkInfo.xml" --rom_model --sys_stacksize=0x200 -o "EQ.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv6/tools/compiler/c5500_4.4.1/bin/cl55" -v5515 --memory_model=large -g --define=c5535 --diag_warning=225 --ptrdiff_size=16 -z -m"EQ.map" --stack_size=0x200 --heap_size=0x400 -i"C:/ti/ccsv6/tools/compiler/c5500_4.4.1/lib" -i"C:/ti/ccsv6/tools/compiler/c5500_4.4.1/include" -i"D:/ra22-2015/DSP2_projekat1/Projektni zadatak (1)/EQ/c55xx_csl/lib" -i"D:/ra22-2015/DSP2_projekat1/Projektni zadatak (1)/EQ/lib" --reread_libs --warn_sections --xml_link_info="vezba-ezdsp_linkInfo.xml" --rom_model --sys_stacksize=0x200 -o "EQ.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 EQ.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: C5500 Hex Utility'
-	"D:/ti/ccsv6/tools/compiler/c5500_4.4.1/bin/hex55"  -o "EQ.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv6/tools/compiler/c5500_4.4.1/bin/hex55"  -o "EQ.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
