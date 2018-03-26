@@ -4,7 +4,7 @@
 // * Godina: 2017
 // *
 // * Zadatak: Ekvalizacija audio signala
-// * Autor: Jelena Boroja RA22/2015
+// * Autor:
 // *                                                                          
 // *                                                                          
 /////////////////////////////////////////////////////////////////////////////
@@ -59,6 +59,8 @@ void main( void )
 
     while(1)
     {
+
+
     	aic3204_read_block(sampleBufferL, sampleBufferR);
 
     	/* Your code here */
